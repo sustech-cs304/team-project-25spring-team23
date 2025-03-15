@@ -1,0 +1,56 @@
+# Ignore Unreal Engine generated files  
+Binaries/  
+DerivedDataCache/  
+Intermediate/  
+Saved/  
+Build/  
+*.sln  
+*.xcodeproj  
+*.xcworkspace  
+*.suo  
+*.user  
+*.opensdf  
+*.sdf  
+*.sln.docstates  
+*.VC.db  
+*.VC.VC.opendb  
+*.VC.VC.db  
+*.VC.VC.db-shm  
+*.VC.VC.db-wal  
+*.ipch  
+*.aps  
+*.ncb  
+*.opendb  
+*.log  
+*.DS_Store  
+Thumbs.db  
+
+# Ignore local project settings  
+*.ini  
+*.log  
+*.config  
+
+# Ignore Visual Studio files  
+.vs/  
+*.vcxproj  
+*.vcxproj.filters  
+*.vcxproj.user  
+
+# Ignore macOS files  
+.DS_Store  
+._*  
+
+# Ignore Linux files  
+*~  
+*.swp  
+*.swo  
+
+# Ignore JetBrains Rider files  
+.idea/  
+*.iml  
+
+# Ignore Visual Studio Code files  
+.vscode/  
+
+# Ignore any generated content  
+*.generated.*  
