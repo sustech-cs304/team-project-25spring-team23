@@ -1,17 +1,21 @@
 # Unreal Engine 5 生成的文件  
 Binaries/  
+DerivedDataCache/
 Intermediate/  
 Saved/  
-DerivedDataCache/  
+Build/
 
 # Visual Studio 生成的文件  
+.vscode
 .vs/  
 *.sln  
 *.suo  
 *.opensdf  
 *.sdf  
-*.VC.db  
-*.VC.opendb  
+*.vc.db  
+*.opendb  
+*.xcodeproj
+*.xcworkspace
 
 # 其他临时文件  
 *.log  
