@@ -6,8 +6,11 @@
 
 1. Friendly User Interface
 
-    Start/quit the game , enter a level and navigate menus conveniently. Get clear guidance(e.g. keyboard guidance/mission guidance) from HUD and minimap. 
-
+    Start/quit the game , enter a level and navigate menus conveniently. Get clear guidance(e.g. keyboard guidance/mission guidance) from HUD and minimap.
+   
+2. Dynamic environment simulation system
+   
+   The 3D modeling replicates the campus of SUSTech, and supports dynamic switching of weather such as rain, snow and fog and the simulation of physical parameters. A 24-hour light cycle of light and shadow changes, and multiple ambient sound effects help create an immersive campus experience.
 ## Unfunctional Requirements
 
 1. (Performance)The game should run smoothly on midrange PCs with 1k/30+fps.
@@ -17,7 +20,9 @@
 ## Data Requirements
 
 1. on-time game statistics(e.g. car speed, time limit, car health, drift distance, etc.)
+2. SUSTech GIS geographic data, architectural blueprints and materials, weather effects resource package and environmental sound library
 
 ## Technical requirements
 
 1. UMG(Unreal Motion Graphics UI Designer) for UI design.
+2. Realize a dynamic interactive environment driven by weather/day and night.
