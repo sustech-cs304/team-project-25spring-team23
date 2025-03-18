@@ -18,6 +18,9 @@
 
    The 3D modeling replicates the campus of SUSTech, and supports dynamic switching of weather such as rain, snow and fog and the simulation of physical parameters. A 24-hour light cycle of light and shadow changes, and multiple ambient sound effects help create an immersive campus experience.
 
+5. AI Opponent Behavior Modeling
+
+   Design AI opponents with different difficulty levels, providing beginner, intermediate, and advanced modes. Each mode features AI with varying reaction speeds, path planning, and obstacle avoidance strategies. AI players will navigate through the SUSTech campus map, identifying and avoiding obstacles (such as traffic cones, benches, and construction zones) and dynamically adjusting routes during the race.
 ## Unfunctional Requirements
 
 1. (Performance)The game should run smoothly on midrange PCs with 1k/30+fps.
