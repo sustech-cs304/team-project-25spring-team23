@@ -20,7 +20,8 @@
 
 5. AI Opponent Behavior Modeling
 
-   Design AI opponents with different difficulty levels, providing beginner, intermediate, and advanced modes. Each mode features AI with varying reaction speeds, path planning, and obstacle avoidance strategies. AI players will navigate through the SUSTech campus map, identifying and avoiding obstacles (such as traffic cones, benches, and construction zones) and dynamically adjusting routes during the race.
+   Design AI opponents with different difficulty levels, providing beginner, intermediate and advanced modes. Each mode features AI with varying reaction speeds, path planning, and obstacle avoidance strategies. AI players will navigate through the SUSTech campus map, identify and avoid obstacles, and be able to make adjustments in case of unexpected situations, such as being hit by other vehicles.
+   
 ## Unfunctional Requirements
 
 1. (Performance)The game should run smoothly on midrange PCs with 1k/30+fps.
