@@ -47,4 +47,6 @@
 3. Use C++ and blueprint for UE.
 4. Server architecture to support online gaming functions.
 5. Use Git and GitHub to manage versioning of project code and resources.
-6. Use blender for modeling
+6. Modeling tools such as Blender and Maya.
+7. Niagara Particle System and the Ambient Sound Library.
+
