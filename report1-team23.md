@@ -4,7 +4,7 @@
 
 ## Functional Requirements
 
-1.Map 
+1. Map 
    
    Map modeling and lane design based on SUSTech.
 
