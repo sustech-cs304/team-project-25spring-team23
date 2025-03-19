@@ -38,7 +38,7 @@
 2. SUSTech GIS geographic data, architectural blueprints and materials, weather effects resource package and environmental sound library.
 3. Player account information (username, game progress).
 4. The player's record of performance in different game modes (match time, final ranking).
-5. Vehicles data
+5. Vehicles specs(e.g. acceleration rate, top speed, etc.)
 
 ## Technical requirements
 
