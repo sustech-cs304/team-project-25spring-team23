@@ -15,7 +15,7 @@
 
 3. Dynamic environment simulation system
 
-   The 3D modeling replicates the campus of SUSTech, and supports dynamic switching of weather such as rain, snow and fog and the simulation of physical parameters. A 24-hour light cycle of light and shadow changes, and multiple ambient sound effects help create an immersive campus experience.
+   The 3D modeling replicates the campus of SUSTech, and supports dynamic switching of weather such as rain and fog and the simulation of physical parameters. A 24-hour light cycle of light and shadow changes, and multiple ambient sound effects help create an immersive campus experience.
 
 4. AI Opponent Behavior Modeling
 
@@ -23,7 +23,7 @@
 
 5. Game mode
 
-   Design different game modes, including single-player for completing tasks, pve mode, and pvp mode. Allow players to freely choose pvp or pve mode, and enter missions or racing modes at specific locations on the map. In single-player mode, players can complete certain tasks, such as staying in the air for five seconds or not colliding. In pvp or pve mode, players need to race with other vehicles on certain routes.
+   Design different game modes, including single-player for completing tasks, pve mode, and pvp mode. Allow players to freely choose pvp or pve mode, and enter missions or racing modes at specific locations on the map. In single-player mode, players can complete certain tasks, such as staying in the air for five seconds or not colliding. In pve mode, players need to race with other vehicles on certain routes.
    
 ## Unfunctional Requirements
 
@@ -44,6 +44,7 @@
 
 1. UMG(Unreal Motion Graphics UI Designer) for UI design.
 2. Use Python scripts for automated testing and data processing.
-3. Use C++ for UE.
+3. Use C++ and blueprint for UE.
 4. Server architecture to support online gaming functions.
 5. Use Git and GitHub to manage versioning of project code and resources.
+6. Use blender for modeling
