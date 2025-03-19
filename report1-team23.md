@@ -21,6 +21,10 @@
 5. AI Opponent Behavior Modeling
 
    Design AI opponents with different difficulty levels, providing beginner, intermediate and advanced modes. Each mode features AI with varying reaction speeds, path planning, and obstacle avoidance strategies. AI players will navigate through the SUSTech campus map, identify and avoid obstacles, and be able to make adjustments in case of unexpected situations, such as being hit by other vehicles.
+
+6. Game mode
+
+   Design different game modes, including single-player, pve, and pvp modes for completing quests. Allow players to freely choose pvp or pve modes, and enter missions or racing modes at specific locations on the map
    
 ## Unfunctional Requirements
 
