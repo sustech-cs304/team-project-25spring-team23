@@ -6,7 +6,7 @@
 
 1. Map 
    
-   Map modeling and lane design based on SUSTech.
+   Map modeling and lane design based on SUSTech. Allow users to play in the SUSTech freely
 
 2. Advanced Driving Physics (Acceleration, Braking, and Drifting)
 
