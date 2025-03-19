@@ -28,8 +28,8 @@
 ## Unfunctional Requirements
 
 1. (Performance)The game should run smoothly on midrange PCs with 1k/30+fps.
-2. (Security)The game saves should be encrypted to prevent cheating/tampering.
-3. (Usability)Controls should be intuitive and responsive, suitable for both novice and experienced players. Friendly user interface.
+2. (Security)The game saves should be encrypted to prevent cheating/tampering. Encryption should be performed using AES-256.
+3. (Usability)Controls should be intuitive and responsive, suitable for both novice and experienced players. Controls must achieve a response time of less than 100 milliseconds for player inputs. Friendly user interface.
 4. (Scalability): System should support various vehicle models with different handling characteristics. Modular vehicle control system to allow easy updates or additions of new mechanics.
 
 ## Data Requirements
