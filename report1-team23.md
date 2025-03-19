@@ -24,7 +24,7 @@
 
 6. Game mode
 
-   Design different game modes, including single-player, pve, and pvp modes for completing quests. Allow players to freely choose pvp or pve modes, and enter missions or racing modes at specific locations on the map
+   Design different game modes, including single-player for completing tasks, pve mode, and pvp mode. Allow players to freely choose pvp or pve mode, and enter missions or racing modes at specific locations on the map. In single-player mode, players can complete certain tasks, such as staying in the air for five seconds or not colliding. In pvp or pve mode, players need to race with other vehicles on certain routes.
    
 ## Unfunctional Requirements
 
