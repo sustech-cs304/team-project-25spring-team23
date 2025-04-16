@@ -19,9 +19,7 @@
 
 ### The architecture of PVE can be divided into three core modules:
 **Path Generation Module**
-
 **Vehicle Control Module**
-
 **Path Extraction and Steering Instruction Module**
 
 #### 1. Path Generation Module
