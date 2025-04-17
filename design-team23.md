@@ -56,3 +56,4 @@ We have divided the game architecture into seven modules. In this report, we wil
 
 ![1744813862731](image/design-team23/1744813862731.png)
 
+
