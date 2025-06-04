@@ -20,6 +20,10 @@
 * 平均圈复杂度：3
 * 依赖： EuropeanHornbeam、UltraDynamicSky
 
+### AI
+
+* 1个蓝图类
+
 ## 二、 Documentation
 
 ### Doc for Users
@@ -107,6 +111,29 @@ UI控件蓝图、主菜单关卡蓝图和UI相关图标、小地图材质等资�
 * **Road**： 内含所有的道路和路灯的纹理、材质、网格体与Actor，可以根据需要进行替换与修改。
 * **EuropeanHornbeam**： 内含所有的树木的纹理、材质、网格体和植物体，可以根据需要进行替换与修改。
 * **Ultra_Dynamic_Sky and Ultra_Dynamic_Weather**： 分布用于控制天空和天气，支持丰富多样的自定义类型。
+
+#### 4. AI
+
+AI车辆蓝图类：SportsCar_Pawn_ai2
+
+样条对象：Auto1_Spline
+
+AI车辆作为子类继承第2节中的车辆控制设置
+
+* FindNearestSpline函数
+  1. 输入：样条对象
+  2. 输出：样条对象
+  3. 功能：寻找最近的样条
+* CalculateSteeringInput函数
+  1. 输入：样条对象
+  2. 输出：浮点数
+  3. 功能：决策当前状态如何转向
+* CalculateBrakeInput函数
+  1. 输入：样条对象、当前与规划路线之间的切线向量
+  2. 输出：浮点数
+  3. 功能：决策当前状态如何刹车
+* 主函数
+  持续更新自己的位置，通过自身和赛道的相对位置规划路线，并根据当前位置、速度、相对位置以及规划的路线调用不同的控制器，如油门，刹车，转向等。
 
 ## 三、 Tests
 
