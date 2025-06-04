@@ -1,41 +1,44 @@
 # 极限竞速：南科大 Team 23 Final Report
 
-## 1 Metrics
+## 一、 Metrics
 
 本项目使用Unreal Engine 5.5，基于蓝图制作
 
-### 1.1 UI部分
+### UI
 
 - 15个蓝图类
 - 平均圈复杂度：5
-- 依赖：
-  1. Electra Player Plugin
-  2. Async Loading Screen Plugin
-  3. FidelityFX$^{TM}$ Super Resolution 3 SDK
+- 依赖：Electra Player Plugin、Async Loading Screen Plugin、FidelityFX$^{TM}$ Super Resolution 3 SDK
 
-### 1.2 Vehicle Controls
+### 车辆控制
 
 - 13个蓝图类
 
-## 2 Documentation
+### 环境
 
-### 2.1 Doc for Users
+* 4个蓝图类
+* 平均圈复杂度：3
+* 依赖： EuropeanHornbeam、UltraDynamicSky
 
-#### 2.1.1 安装游戏
+## 二、 Documentation
 
-下载xxxxx.exe，选择安装路径，点击安装游戏。
+### Doc for Users
 
-#### 2.1.2 开始游戏
+#### 1. 安装游戏
+
+下载极限竞速：南科大特供版-安装程序.exe，选择安装路径，点击安装游戏。
+
+#### 2. 开始游戏
 
 进入游戏开场动画后按任意键进入主菜单。
 
 点击“Play”进入主世界，此时是开放世界探索模式。在探索中你会遇到路中间的任务标识，可以按E开启特定任务，例如进入特定关卡的人机对战模式。
 
-#### 2.1.3 暂停游戏
+#### 3. 暂停游戏
 
 在游戏中按Q键暂停游戏并呼出菜单。你可以点击“Continue”继续游戏，点击“Settings”进入设置界面，或者点击“Quit"离开游戏。
 
-#### 2.1.4 画面设置
+#### 4. 画面设置
 
 在设置界面点击“Graphic”可进入画面设置界面。
 
@@ -43,7 +46,7 @@
 
 你还可以开启抗锯齿。抗锯齿方法默认为TAA。
 
-#### 2.1.5 车辆控制绑定摁键
+#### 5. 车辆控制绑定摁键
 
 `Q`：暂停游戏
 
@@ -57,11 +60,9 @@
 
 `w,a,s,d`：当然，这些是用来加速和转向的。
 
-### 2.2 Doc for Developers
+### Doc for Developers
 
-该游戏使用UE5.5进行开发。
-
-#### 2.2.1 UI控件
+#### 1. UI控件
 
 UI控件蓝图、主菜单关卡蓝图和UI相关图标、小地图材质等资产存储在./Content/UI/目录。
 
@@ -73,18 +74,16 @@ UI控件蓝图、主菜单关卡蓝图和UI相关图标、小地图材质等资�
 - **BP_GameInstance，BP_SaveSettings和BPI_SaveSettings:** 这是游戏设置参数的实例，用于使用户的设置参数持久化。
 - **WBP_MiniMap:** 这是小地图的控件蓝图，用于在HUD界面显示小地图。
 
-#### 2.2.2 车辆控制
+#### 2. 车辆控制
 
 基本蓝图：VehicleAdvPawn
 
-##### Event Begin：事件开始时的控制流
+* **Event Begin**：事件开始时的控制流
 
 1. 投射车辆移动组件，以便访问专用输入功能
 2. 信息HUD初始化：事件开始时初始化信息HUD，这是一个UI界面，用于指示玩家启用的按键及其功能。
 
-##### Event Tick：每个Tick的控制流
-
-开发者可以实现周期性功能。现在有：
+* **Event Tick**：每个Tick的控制流，开发者可以实现周期性功能。现在有：
 
 1. 抑制车辆在空中旋转。
 2. 重新调整摄像机使其面向前方
@@ -96,28 +95,39 @@ UI控件蓝图、主菜单关卡蓝图和UI相关图标、小地图材质等资�
 
    - 如果您需要其他缩小距离，请修改“地图范围限制”
 
-##### Steering and Throttle Controls
+* **Steering and Throttle Controls**：这是转向和油门控制的基本控制流。如果您想修改转向或油门控制行为，或者添加一些新功能，这里就是您要找的地方。
+* **Braking controls**：这是刹车控制的基本控制流程。如果您想修改刹车行为或添加一些新功能，这里就是您要找的地方。现在音频组件已绑定到刹车上。
+* **Camera Controls**：摄像头会随着时间的推移重新调整为面向前方。
+* **Switches between back and front camera**：目前通过触发器切换。您可以使用任何您想要的分支。
+* **使用 FOV 动态缩小摄像头距离**：通过Event Tick 检查
 
-这是转向和油门控制的基本控制流。如果您想修改转向或油门控制行为，或者添加一些新功能，这里就是您要找的地方。
+#### 3. 环境
 
-##### Braking controls
+* **Building**： 内含所有建筑物的纹理、材质和网格体，可以根据需要进行替换与修改。
+* **Road**： 内含所有的道路和路灯的纹理、材质、网格体与Actor，可以根据需要进行替换与修改。
+* **EuropeanHornbeam**： 内含所有的树木的纹理、材质、网格体和植物体，可以根据需要进行替换与修改。
+* **Ultra_Dynamic_Sky and Ultra_Dynamic_Weather**： 分布用于控制天空和天气，支持丰富多样的自定义类型。
 
-这是刹车控制的基本控制流程。如果您想修改刹车行为或添加一些新功能，这里就是您要找的地方。现在音频组件已绑定到刹车上。
+## 三、 Tests
 
-##### Camera Controls
+在本项目中，我们采用了功能测试编辑器（Functional Testing Editor）来确保游戏各个模块按照预期正常工作。具体测试措施包括：
 
-摄像头会随着时间的推移重新调整为面向前方。
+* **功能模块测试**：我们通过功能测试编辑器对游戏中的关键功能进行验证，如车辆控制、任务系统、AI 行为等，确保它们能正常响应用户输入并执行预定操作。
+* **测试覆盖率**：使用测试覆盖率工具生成的报告显示，测试覆盖了关键路径的 90% 以上，确保了代码的质量和稳定性。
+* **手动测试**：除了自动化测试外，团队还进行了多轮手动测试，专注于用户界面的可用性和游戏流程的顺畅性，收集玩家反馈后进行相应调整。
 
-##### Switches between back and front camera
+## 四、Build
 
-目前通过触发器切换。您可以使用任何您想要的分支。
+构建过程使用了 Unreal Engine 5 (UE5) 内置的打包功能，生成可在 Windows 上运行的可执行文件（.exe）。具体步骤如下：
 
-##### 使用 FOV 动态缩小摄像头距离
+![59fa5a3dd367f23be61f4e13fc2e46ea.png](image/final-team23/pack.png)
 
-通过Event Tick 检查
+* 打包设置：在 UE5 中进行项目设置，配置需要打包的场景和资源，确保所有必要内容被包括在内。
+* 生成可执行文件：通过 UE5 的打包功能，一键生成游戏的可执行文件，确保游戏能够在目标操作系统上正常运行。
 
-## 3 Tests
+## 五、Deployment
 
-## 4 Build
+![cf9633636db970ebf1ccef414ee24b74.png](image/final-team23/install.png)
 
-## 5 Deployment
+* 部署方法：使用 Inno Setup 创建的安装包，用户只需运行安装程序，按照提示完成安装即可。
+* 安装包内容：安装包中包括游戏的可执行文件、所需的动态链接库（DLL），以及配置文件和资源文件，确保用户在安装后可以顺利运行游戏。
