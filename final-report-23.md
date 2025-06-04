@@ -9,11 +9,13 @@
 - 15个蓝图类
 - 平均圈复杂度：5
 - 依赖：
-    1. Electra Player Plugin
-    2. Async Loading Screen Plugin
-    3. FidelityFX$^{TM}$ Super Resolution 3 SDK
+  1. Electra Player Plugin
+  2. Async Loading Screen Plugin
+  3. FidelityFX$^{TM}$ Super Resolution 3 SDK
 
-### 1.2 
+### 1.2 Vehicle Controls
+
+- 13个蓝图类
 
 ## 2 Documentation
 
@@ -41,7 +43,19 @@
 
 你还可以开启抗锯齿。抗锯齿方法默认为TAA。
 
-#### 2.1.5 
+#### 2.1.5 车辆控制绑定摁键
+
+`Q`：暂停游戏
+
+`H`：显示/隐藏新手指南。
+
+`B`：立即重置车辆。尤其适用于车辆卡住的情况。
+
+`空格键`：通过改变车轮的摩擦系数来启用漂移。
+
+`L`：关闭/近光/远光
+
+`w,a,s,d`：当然，这些是用来加速和转向的。
 
 ### 2.2 Doc for Developers
 
@@ -59,7 +73,48 @@ UI控件蓝图、主菜单关卡蓝图和UI相关图标、小地图材质等资�
 - **BP_GameInstance，BP_SaveSettings和BPI_SaveSettings:** 这是游戏设置参数的实例，用于使用户的设置参数持久化。
 - **WBP_MiniMap:** 这是小地图的控件蓝图，用于在HUD界面显示小地图。
 
-#### 2.2.2 
+#### 2.2.2 车辆控制
+
+基本蓝图：VehicleAdvPawn
+
+##### Event Begin：事件开始时的控制流
+
+1. 投射车辆移动组件，以便访问专用输入功能
+2. 信息HUD初始化：事件开始时初始化信息HUD，这是一个UI界面，用于指示玩家启用的按键及其功能。
+
+##### Event Tick：每个Tick的控制流
+
+开发者可以实现周期性功能。现在有：
+
+1. 抑制车辆在空中旋转。
+2. 重新调整摄像机使其面向前方
+3. 漂移时显示漂移效果
+
+   - 漂移标志
+   - 车轮上燃烧（包括音效）
+4. 使用FOV动态缩小摄像机距离：
+
+   - 如果您需要其他缩小距离，请修改“地图范围限制”
+
+##### Steering and Throttle Controls
+
+这是转向和油门控制的基本控制流。如果您想修改转向或油门控制行为，或者添加一些新功能，这里就是您要找的地方。
+
+##### Braking controls
+
+这是刹车控制的基本控制流程。如果您想修改刹车行为或添加一些新功能，这里就是您要找的地方。现在音频组件已绑定到刹车上。
+
+##### Camera Controls
+
+摄像头会随着时间的推移重新调整为面向前方。
+
+##### Switches between back and front camera
+
+目前通过触发器切换。您可以使用任何您想要的分支。
+
+##### 使用 FOV 动态缩小摄像头距离
+
+通过Event Tick 检查
 
 ## 3 Tests
 
