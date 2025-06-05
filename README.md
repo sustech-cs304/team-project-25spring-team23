@@ -1,4 +1,4 @@
-# 极限竞速：南科大 Team 23 Final Report
+# 极限竞速：南科大 README
 
 ## 一、 Documentation
 
