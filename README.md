@@ -1,30 +1,6 @@
 # 极限竞速：南科大 Team 23 Final Report
 
-## 一、 Metrics
-
-本项目使用Unreal Engine 5.5，基于蓝图制作
-
-### UI
-
-- 15个蓝图类
-- 平均圈复杂度：5
-- 依赖：Electra Player Plugin、Async Loading Screen Plugin、FidelityFX$^{TM}$ Super Resolution 3 SDK
-
-### 车辆控制
-
-- 13个蓝图类
-
-### 环境
-
-* 4个蓝图类
-* 平均圈复杂度：3
-* 依赖： EuropeanHornbeam、UltraDynamicSky
-
-### AI
-
-* 1个蓝图类
-
-## 二、 Documentation
+## 一、 Documentation
 
 ### Doc for Users
 
@@ -143,18 +119,7 @@ AI车辆作为子类继承第2节中的车辆控制设置
 * 主函数
   持续更新自己的位置，通过自身和赛道的相对位置规划路线，并根据当前位置、速度、相对位置以及规划的路线调用不同的控制器，如油门，刹车，转向等。
 
-## 三、 Tests
-
-在本项目中，我们采用了功能测试编辑器（Functional Testing Editor）来确保游戏各个模块按照预期正常工作。具体测试措施包括：
-
-![test2.png](image/final-team23/test2.png)
-![test1.png](image/final-team23/test1.png)
-
-* **功能模块测试**：我们通过功能测试编辑器对游戏中的关键功能进行验证，如车辆控制、任务系统、AI 行为等，确保它们能正常响应用户输入并执行预定操作。
-* **测试覆盖率**：使用测试覆盖率工具生成的报告显示，测试覆盖了关键路径的 90% 以上，确保了代码的质量和稳定性。
-* **手动测试**：除了自动化测试外，团队还进行了多轮手动测试，专注于用户界面的可用性和游戏流程的顺畅性，收集玩家反馈后进行相应调整。
-
-## 四、Build
+## 二、Build
 
 构建过程使用了 Unreal Engine 5 (UE5) 内置的打包功能，生成可在 Windows 上运行的可执行文件（.exe）。具体步骤如下：
 
@@ -163,7 +128,7 @@ AI车辆作为子类继承第2节中的车辆控制设置
 * 打包设置：在 UE5 中进行项目设置，配置需要打包的场景和资源，确保所有必要内容被包括在内。
 * 生成可执行文件：通过 UE5 的打包功能，一键生成游戏的可执行文件，确保游戏能够在目标操作系统上正常运行。
 
-## 五、Deployment
+## 三、Deployment
 
 ![cf9633636db970ebf1ccef414ee24b74.png](image/final-team23/install.png)
 
